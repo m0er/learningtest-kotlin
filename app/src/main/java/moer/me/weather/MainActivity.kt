@@ -4,9 +4,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import org.jetbrains.anko.find
-import org.jetbrains.anko.longToast
-import org.jetbrains.anko.toast
+import moer.me.chp8.Request
+import org.jetbrains.anko.*
 
 class MainActivity : AppCompatActivity() {
     private val items = listOf(
@@ -22,6 +21,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        doAsync {
+            Request("http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=5771a54eddd396a8c503d280154d5abf").run()
+            uiThread {
+                longToast("Request performed")
+            }
+        }
 
         val forecastList: RecyclerView = find(R.id.forecast_list)
         forecastList.layoutManager = LinearLayoutManager(this)
