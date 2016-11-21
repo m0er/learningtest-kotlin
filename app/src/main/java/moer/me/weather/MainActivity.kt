@@ -1,5 +1,6 @@
 package moer.me.weather
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -30,8 +31,16 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, message, length).show()
     }
 
-    fun niceToast(message: String, tag: String = MainActivity::class.java.simpleName, length: Int = Toast.LENGTH_SHORT) {
-        Toast.makeText(this, "[${tag.toUpperCase()}] $message", length).show()
+    fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
+        Toast.makeText(this, message, duration).show()
     }
+
+//    fun toast(message: String, length: Int = Toast.LENGTH_SHORT) {
+//        Toast.makeText(this, message, length).show()
+//    }
+//
+//    fun niceToast(message: String, tag: String = MainActivity::class.java.simpleName, length: Int = Toast.LENGTH_SHORT) {
+//        Toast.makeText(this, "[${tag.toUpperCase()}] $message", length).show()
+//    }
 
 }
