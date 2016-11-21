@@ -1,7 +1,6 @@
 package moer.me.weather
 
 import moer.me.weather.data.Forecast
-import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.util.*
@@ -28,9 +27,13 @@ class LearningTest {
         val f1 = Forecast(Date(), 27.5f, "Shiny day")
         val (date, temperature, details) = f1
 
-        assertNotNull(date)
-        assertTrue(temperature.equals(27.5f))
-        assertTrue(details.equals("Shiny day"))
+        val comp1 = f1.component1()
+        val comp2 = f1.component2()
+        val comp3 = f1.component3()
+
+        assertTrue(date.equals(comp1))
+        assertTrue(temperature.equals(comp2))
+        assertTrue(details.equals(comp3))
     }
 
     @Test fun mapAndMultiDeclaration() {
