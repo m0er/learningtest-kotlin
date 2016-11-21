@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import moer.me.chp8.Request
+import moer.me.weather.network.Request
 import org.jetbrains.anko.*
 
 class MainActivity : AppCompatActivity() {

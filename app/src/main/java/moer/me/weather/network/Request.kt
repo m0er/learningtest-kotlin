@@ -1,4 +1,4 @@
-package moer.me.chp8
+package moer.me.weather.network
 
 import android.util.Log
 import java.net.URL
