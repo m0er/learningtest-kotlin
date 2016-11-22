@@ -1,7 +1,6 @@
 package moer.me.weather.command
 
-import moer.me.weather.command.Command
-import moer.me.weather.mapper.ForecastdataMapper
+import moer.me.weather.mapper.ForecastDataMapper
 import moer.me.weather.model.ForecastList
 import moer.me.weather.network.ForecastRequest
 
@@ -11,7 +10,7 @@ import moer.me.weather.network.ForecastRequest
 class RequestForecastCommand(val zipCode: String) : Command<ForecastList> {
 
     override fun execute(): ForecastList {
-        return ForecastdataMapper().convertFromDataModel(ForecastRequest(zipCode).execute())
+        return ForecastDataMapper().convertFromDataModel(ForecastRequest(zipCode).execute())
     }
 
 }

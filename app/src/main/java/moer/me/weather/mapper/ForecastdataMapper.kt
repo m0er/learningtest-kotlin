@@ -10,7 +10,7 @@ import moer.me.weather.model.Forecast as ModelForecast
 /**
  * Created by Yun on 2016. 11. 22..
  */
-class ForecastdataMapper {
+class ForecastDataMapper {
 
     fun convertFromDataModel(forecast: ForecastResult): ForecastList {
         return ForecastList(forecast.city.name, forecast.city.country, convertForecastListToDomain(forecast.list))
