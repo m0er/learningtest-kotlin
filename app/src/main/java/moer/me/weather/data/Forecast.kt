@@ -1,8 +1,6 @@
 package moer.me.weather.data
 
-import java.util.*
-
 /**
  * Created by Yun on 2016. 11. 21..
  */
-data class Forecast(val date: Date, val temperature: Float, val details: String)
+data class Forecast(val dt: Long, val temp: Temperature, val pressure: Float, val humidity: Int, val weather: List<Weather>, val speed: Float, val deg: Int, val clouds: Int, val rain: Float)

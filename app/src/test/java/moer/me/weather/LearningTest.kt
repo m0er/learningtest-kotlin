@@ -1,6 +1,6 @@
 package moer.me.weather
 
-import moer.me.weather.data.Forecast
+import moer.me.weather.data.DummyForecast
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.util.*
@@ -15,7 +15,7 @@ class LearningTest {
     }
 
     @Test fun copying() {
-        val f1 = Forecast(Date(), 27.5f, "Shiny day")
+        val f1 = DummyForecast(Date(), 27.5f, "Shiny day")
         val f2 = f1.copy(temperature = 30f)
 
         assertTrue(f1.date.equals(f2.date))
@@ -24,7 +24,7 @@ class LearningTest {
     }
 
     @Test fun multiDeclaration() {
-        val f1 = Forecast(Date(), 27.5f, "Shiny day")
+        val f1 = DummyForecast(Date(), 27.5f, "Shiny day")
         val (date, temperature, details) = f1
 
         val comp1 = f1.component1()
