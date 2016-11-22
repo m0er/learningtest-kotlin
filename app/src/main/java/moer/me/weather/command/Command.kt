@@ -1,4 +1,4 @@
-package moer.me.weather
+package moer.me.weather.command
 
 /**
  * Created by Yun on 2016. 11. 22..

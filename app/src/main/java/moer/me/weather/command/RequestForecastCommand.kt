@@ -1,6 +1,6 @@
 package moer.me.weather.command
 
-import moer.me.weather.Command
+import moer.me.weather.command.Command
 import moer.me.weather.mapper.ForecastdataMapper
 import moer.me.weather.model.ForecastList
 import moer.me.weather.network.ForecastRequest
