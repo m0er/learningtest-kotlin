@@ -3,9 +3,12 @@ package moer.me.weather
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
 import moer.me.weather.network.Request
-import org.jetbrains.anko.*
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.longToast
+import org.jetbrains.anko.toast
+import org.jetbrains.anko.uiThread
 
 class MainActivity : AppCompatActivity() {
     private val items = listOf(
@@ -29,7 +32,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val forecastList: RecyclerView = find(R.id.forecast_list)
+//        val forecastList = find<RecyclerView>(R.id.forecast_list)
+//        val forecastList: RecyclerView = find(R.id.forecast_list)
+        val forecastList = forecast_list
         forecastList.layoutManager = LinearLayoutManager(this)
         forecastList.adapter = ForecastListAdapter(items)
 
