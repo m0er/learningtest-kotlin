@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import moer.me.weather.command.RequestForecastCommand
+import moer.me.weather.utils.supportsLollipop
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.uiThread
@@ -23,5 +24,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         forecastList.layoutManager = LinearLayoutManager(this)
+
+        supportsLollipop {
+            toast("only executed if the version is Lollipop or newer")
+        }
     }
 }
