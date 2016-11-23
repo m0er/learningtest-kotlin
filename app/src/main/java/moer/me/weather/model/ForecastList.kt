@@ -5,8 +5,8 @@ package moer.me.weather.model
  */
 data class ForecastList(val city: String, val country: String, val dailyForecast:List<Forecast>) {
 
-    operator fun get(position: Int): Forecast = dailyForecast[position]
+    operator fun get(position: Int) = dailyForecast[position]
 
-    fun size(): Int = dailyForecast.size
+    fun size() = dailyForecast.size
 
 }

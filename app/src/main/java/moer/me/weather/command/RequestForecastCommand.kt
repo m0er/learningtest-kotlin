@@ -9,8 +9,6 @@ import moer.me.weather.network.ForecastRequest
  */
 class RequestForecastCommand(private val zipCode: String) : Command<ForecastList> {
 
-    override fun execute(): ForecastList {
-        return ForecastDataMapper().convertFromDataModel(ForecastRequest(zipCode).execute())
-    }
+    override fun execute() = ForecastDataMapper().convertFromDataModel(ForecastRequest(zipCode).execute())
 
 }

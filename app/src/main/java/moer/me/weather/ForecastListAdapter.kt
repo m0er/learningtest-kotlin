@@ -15,15 +15,11 @@ import moer.me.weather.utils.ctx
  */
 class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: (Forecast) -> Unit) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder? {
-        return ViewHolder(LayoutInflater.from(parent.ctx).inflate(R.layout.item_forecast, parent, false), itemClick)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.ctx).inflate(R.layout.item_forecast, parent, false), itemClick)
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindForecast(weekForecast[position])
-    }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bindForecast(weekForecast[position])
 
-    override fun getItemCount(): Int = weekForecast.size()
+    override fun getItemCount() = weekForecast.size()
 
     class ViewHolder(view: View, val itemClick: (Forecast) -> Unit) : RecyclerView.ViewHolder(view) {
 
