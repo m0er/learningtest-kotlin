@@ -1,4 +1,4 @@
-package moer.me.weather.data
+package moer.me.kfad.weather.data
 
 /**
  * Created by Yun on 2016. 11. 22..

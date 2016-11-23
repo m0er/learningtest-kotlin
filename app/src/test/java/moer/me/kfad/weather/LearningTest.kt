@@ -1,6 +1,6 @@
-package moer.me.weather
+package moer.me.kfad.weather
 
-import moer.me.weather.data.DummyForecast
+import moer.me.kfad.weather.data.DummyForecast
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.util.*

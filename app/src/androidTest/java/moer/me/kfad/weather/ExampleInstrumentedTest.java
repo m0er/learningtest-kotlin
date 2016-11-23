@@ -1,4 +1,4 @@
-package moer.me.weather;
+package moer.me.kfad.weather;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

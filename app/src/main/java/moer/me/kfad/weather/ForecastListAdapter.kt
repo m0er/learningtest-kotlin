@@ -1,4 +1,4 @@
-package moer.me.weather
+package moer.me.kfad.weather
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_forecast.view.*
-import moer.me.weather.model.Forecast
-import moer.me.weather.model.ForecastList
-import moer.me.weather.utils.ctx
+import moer.me.kfad.weather.model.Forecast
+import moer.me.kfad.weather.model.ForecastList
+import moer.me.kfad.weather.utils.ctx
 
 /**
  * Created by Yun on 2016. 10. 6..

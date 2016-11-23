@@ -1,4 +1,4 @@
-package moer.me.weather.command
+package moer.me.kfad.weather.command
 
 /**
  * Created by Yun on 2016. 11. 22..

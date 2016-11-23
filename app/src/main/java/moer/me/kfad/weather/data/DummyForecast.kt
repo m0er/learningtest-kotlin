@@ -1,4 +1,4 @@
-package moer.me.weather.data
+package moer.me.kfad.weather.data
 
 import java.util.*
 

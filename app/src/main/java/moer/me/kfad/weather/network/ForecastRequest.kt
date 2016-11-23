@@ -1,8 +1,8 @@
-package moer.me.weather.network
+package moer.me.kfad.weather.network
 
 import android.util.Log
 import com.google.gson.Gson
-import moer.me.weather.data.ForecastResult
+import moer.me.kfad.weather.data.ForecastResult
 import java.net.URL
 
 /**

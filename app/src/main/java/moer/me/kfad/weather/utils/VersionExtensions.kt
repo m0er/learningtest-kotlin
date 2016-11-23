@@ -1,4 +1,4 @@
-package moer.me.weather.utils
+package moer.me.kfad.weather.utils
 
 import android.os.Build
 

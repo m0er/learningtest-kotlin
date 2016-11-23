@@ -1,4 +1,4 @@
-package moer.me.chp6
+package moer.me.kfad.chp6
 
 /**
  * Created by Yun on 2016. 10. 6..

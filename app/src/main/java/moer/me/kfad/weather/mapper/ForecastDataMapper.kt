@@ -1,11 +1,11 @@
-package moer.me.weather.mapper
+package moer.me.kfad.weather.mapper
 
-import moer.me.weather.data.Forecast
-import moer.me.weather.data.ForecastResult
-import moer.me.weather.model.ForecastList
+import moer.me.kfad.weather.data.Forecast
+import moer.me.kfad.weather.data.ForecastResult
+import moer.me.kfad.weather.model.ForecastList
 import java.text.DateFormat
 import java.util.*
-import moer.me.weather.model.Forecast as ModelForecast
+import moer.me.kfad.weather.model.Forecast as ModelForecast
 
 /**
  * Created by Yun on 2016. 11. 22..
