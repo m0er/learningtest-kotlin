@@ -13,7 +13,7 @@ import moer.me.weather.utils.ctx
 /**
  * Created by Yun on 2016. 10. 6..
  */
-class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: ForecastListAdapter.OnItemClickListener) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
+class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: (Forecast) -> Unit) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder? {
         return ViewHolder(LayoutInflater.from(parent.ctx).inflate(R.layout.item_forecast, parent, false), itemClick)
@@ -25,7 +25,7 @@ class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: Forecas
 
     override fun getItemCount(): Int = weekForecast.size()
 
-    class ViewHolder(view: View, val itemClick: OnItemClickListener) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View, val itemClick: (Forecast) -> Unit) : RecyclerView.ViewHolder(view) {
 
         fun bindForecast(forecast: Forecast) {
             with(forecast) {
@@ -38,9 +38,4 @@ class ForecastListAdapter(val weekForecast: ForecastList, val itemClick: Forecas
             }
         }
     }
-
-    interface OnItemClickListener {
-        operator fun invoke(forecast: Forecast)
-    }
-
 }
